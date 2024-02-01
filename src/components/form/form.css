@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Quicksand:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.add-form {
+  background-color: #e5771f;
+  padding: 2.8rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+h3 {
+  margin-right: 1.6rem;
+  font-size: 2.4rem;
+}
+
+button,
+input {
+  background-color: #ffebb3;
+  color: #5a3e2b;
+  font-family: inherit;
+  border: none;
+  border-radius: 10rem;
+  padding: 1.2rem 3.2rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.add-form button {
+  text-transform: uppercase;
+  background-color: #76c7ad;
+}
