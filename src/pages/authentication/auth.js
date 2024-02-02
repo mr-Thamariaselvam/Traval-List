@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./auth.css";
 import { validateInput } from "../../utils/validation";
 import usersData from "../../data/user.json";
-
+import { strings } from "../../i18n";
 function Auth({ onLogin }) {
   const navigate = useNavigate();
   const [isSignup, setIsSignup] = useState(false);
@@ -91,11 +91,13 @@ function Auth({ onLogin }) {
 
   return (
     <div className="auth-container">
-      <div className="header">{isSignup ? "Sign Up" : "Log In"}</div>
+      <div className="header">
+        {isSignup ? strings("SignUp") : strings("LogIn")}
+      </div>
 
       <form onSubmit={handleSubmit} className="auth-form">
         <label htmlFor="username" className="form-label">
-          Username
+          {strings("Username")}
         </label>
         <input
           type="text"
@@ -106,7 +108,7 @@ function Auth({ onLogin }) {
           className="form-input"
         />
         <label htmlFor="password" className="form-label">
-          Password
+          {strings("Password")}
         </label>
         <input
           type="password"
@@ -120,7 +122,7 @@ function Auth({ onLogin }) {
         {isSignup && (
           <div className="auth-form">
             <label htmlFor="confirmPassword" className="form-label">
-              Confirm Password
+              {strings("Confirm Password")}
             </label>
             <input
               type="password"
@@ -131,7 +133,7 @@ function Auth({ onLogin }) {
               className="form-input"
             />
             <label htmlFor="email" className="form-label">
-              Email
+              {strings("Email")}
             </label>
             <input
               type="text"
@@ -142,7 +144,7 @@ function Auth({ onLogin }) {
               className="form-input"
             />
             <label htmlFor="phoneNumber" className="form-label">
-              Phone Number
+              {strings("Phone Number")}
             </label>
             <input
               type="text"
@@ -156,7 +158,7 @@ function Auth({ onLogin }) {
         )}
 
         <button type="submit" className="submit-btn">
-          {isSignup ? "Sign Up" : "Log In"}
+          {isSignup ? strings("SignUp") : strings("LogIn")}
         </button>
 
         {error && <p className="error-msg">{error}</p>}
@@ -168,8 +170,8 @@ function Auth({ onLogin }) {
           className="toggle-btn"
         >
           {isSignup
-            ? "Already have an account? Log In"
-            : "Don't have an account? Sign Up"}
+            ? strings("Already have an account? Log In")
+            : strings("Don't have an account? Sign Up")}
         </button>
       </div>
     </div>
