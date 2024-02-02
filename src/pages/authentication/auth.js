@@ -101,7 +101,7 @@ function Auth({ onLogin }) {
           type="text"
           id="username"
           placeholder="Enter your name"
-          value={""}
+          value={username}
           onChange={(e) => setUsername(e.target.value)}
           className="form-input"
         />
