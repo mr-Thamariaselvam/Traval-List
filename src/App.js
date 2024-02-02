@@ -7,6 +7,7 @@ import {
 import Home from "./pages/home";
 import Auth from "./pages/authentication/auth";
 import Customizedlist from "./pages/customizelist/customizedlist";
+import TestComp from "./components/testcomp/testcomp";
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -105,6 +106,11 @@ function App() {
         <Navigate to="/" />
       ),
     },
+
+    {
+      path:"/test",
+      element:<TestComp/>
+    }
   ]);
 
   return <RouterProvider router={router} />;
